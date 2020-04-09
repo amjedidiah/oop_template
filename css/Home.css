@@ -1,0 +1,77 @@
+.jumbotron {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+img.home-slide-1 {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 600px;
+}
+
+#opportunities .card:nth-child(even) {
+  background: #009245;
+}
+
+#opportunities .card:nth-child(even),
+#opportunities .card:nth-child(even) i {
+  color: #fff !important;
+}
+
+#opportunities .card .btn {
+  color: #fff;
+  background: #009245;
+}
+
+#opportunities .card:nth-child(even) .btn {
+  background: #fff;
+  color: #009245;
+}
+
+#convenience hr {
+  border: 2px solid #009245;
+  width: 75px;
+}
+
+#howItWorks ol.carousel-indicators {
+  border: 1px solid #009245;
+  top: 0;
+  height: fit-content;
+}
+
+#reviews blockquote {
+  font-size: 30px;
+  text-align: center;
+  line-height: 35px;
+  font-style: italic;
+  color: #999 !important;
+}
+
+#reviews span {
+  font-size: 50px;
+  color: #000;
+}
+
+#reviews .carousel-controls {
+  text-align: center;
+  display: flex;
+  position: relative;
+  top: -20px;
+  flex-flow: row-reverse;
+}
+
+#reviews .carousel a[role="button"] {
+  position: relative;
+  background: #009245;
+  width: fit-content;
+  padding: 10px;
+}
+
+footer {
+  position: relative;
+  top: -50px;
+  z-index: -1;
+}
