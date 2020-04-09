@@ -1,12 +1,21 @@
 * {
   font-family: "Montserrat", sans-serif;
-  box-sizing: border-box !important;
   word-wrap: break-word !important;
+  transition: all 0.25s ease-out;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 body,
 html {
   height: 100%;
+  scroll-behavior: smooth !important;
+}
+
+#rightScreen,
+#rightScreen > div {
+  min-height: 100% !important;
 }
 
 h1,
@@ -21,7 +30,21 @@ h5,
 h5 ul li,
 h6,
 h6 ul li {
-  font-family: "Roboto", sans-serif;
+  font-family: "Dosis", sans-serif !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+img {
+  image-rendering: optimizeSpeed !important;
 }
 
 .pointer {
@@ -34,10 +57,17 @@ a.active {
   transform: scale(1.05);
 }
 
-.btn {
-  font-weight: 500;
+.btn,
+button {
+  /* font-weight: 500; */
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+form label {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #009245;
 }
 
 .form-control,
@@ -45,14 +75,14 @@ a.active {
 .form-control:-webkit-autofill:hover,
 .form-control:-webkit-autofill:focus,
 .form-control:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
-  box-shadow: 0 0 0px 1000px #fff inset !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 0px 1000px #f6f6f6 inset !important;
+  box-shadow: 0 0 0px 1000px #f6f6f6 inset !important;
+  border: none;
   border-radius: 0;
-  padding-left: 0;
+}
+
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
 }
 
 textarea {
@@ -63,6 +93,7 @@ textarea {
 .modal-dialog,
 .modal-content {
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .modal-header,
@@ -80,9 +111,37 @@ textarea {
   background: #fff;
 }
 
+.text-success {
+  color: #009245 !important;
+}
+
+.btn-white {
+  background: #fff !important;
+  color: #009245 !important;
+}
+
+.bg-light {
+  background: #f6f6f6 !important;
+  background: #e0f1e1 !important;
+}
+
+.bg-success,
+.btn-success {
+  background: #009245 !important;
+}
+
+.card {
+  margin-bottom: 40px !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.just-width {
+  width: fit-content !important;
+}
+
 /************************************
-************Toggle Switch************
-************************************/
+  ************Toggle Switch************
+  ************************************/
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -124,11 +183,11 @@ textarea {
 }
 
 input:checked + .slider {
-  background-color: #8ad729;
+  background-color: #009245;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #8ad729;
+  box-shadow: 0 0 1px #009245;
 }
 
 input:checked + .slider:before {
@@ -144,4 +203,56 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+footer a {
+  color: inherit !important;
+}
+
+footer a:hover,
+footer a:active,
+footer a.active {
+  color: #009245 !important;
+}
+
+.opportunity-bonus {
+  animation: pulse 1.5s infinite;
+  border: 1px solid #009245;
+}
+
+/* The animation code */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hide studd from imported state and LGA code  */
+.select2-selection__rendered {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+
+  .modal-dialog.modal-md {
+    max-width: 320px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns--2 {
+    column-count: 2 !important;
+  }
+  .card-columns {
+    column-count: 3;
+  }
 }
